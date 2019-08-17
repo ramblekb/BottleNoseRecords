@@ -1,0 +1,85 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background: url(../images/background.jpeg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.brand_logo {
+    height: 100px;
+    width: 200px;
+    padding-left: 20px;
+}
+
+.my-navbar {
+  background-color: #B2DFDB; 
+  -webkit-box-shadow: 4px 3px 5px -5px rgba(0,0,0,0.75);
+  -moz-box-shadow: 4px 3px 5px -5px rgba(0,0,0,0.75);
+  box-shadow: 4px 3px 5px -5px rgba(0,0,0,0.75);
+}
+.navbar-brand{
+  color: #004D40 !important;
+  font-size: 20px;
+}
+
+.record {
+    padding: 10px;
+    margin: 10px;
+    background-color: #e8f9ff;
+  }
+
+
+*
+{
+    outline: none;
+}
+
+/* .jumbotron {
+    font-family: Shrikhand, cursive;
+    color: white;
+    background-color: #004D40;
+    font-size: 20px;
+  } */
+
+body
+{
+    margin: 0;
+    background-color: #009688;
+}
+
+.jumbotron {
+    background-color: #004D40;
+    font-size: 20px;
+  }
+
+.record-row {
+    height: 400px;
+    width: 500px;
+    align-content: center;
+    padding-left: 25px;
+    padding-bottom: 25px;
+
+}
+
+.blockquote-footer {
+    height: 20px;
+    width: 300px;
+    align-content: center;
+    /* padding-left: 25px; */
+    padding-bottom: 15px;
+    /* padding-top: 15px */
+
+}
+
+
+div {
+    -webkit-column-gap: 40px; /* Chrome, Safari, Opera */
+    -moz-column-gap: 40px; /* Firefox */
+    column-gap: 40px;
+  }

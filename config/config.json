@@ -1,0 +1,21 @@
+{
+  "development": {
+    "username": "e2hhi91qmfh2ksyq",
+    "password": "x5tb8iahuuofteha",
+    "database": "zyefsl7knp3p1709",
+    "host": "c584md9egjnm02sk.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "root",
+    "password": "7283",
+    "database": "recordCollection_db",
+    "host": "localhost",
+    "dialect": "mysql",
+    "logging": false  
+  },
+  "production": {
+    "use_env_variable": "JAWSDB_URL",
+    "dialect": "mysql"
+  }
+}

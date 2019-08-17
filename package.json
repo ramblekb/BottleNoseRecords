@@ -1,0 +1,61 @@
+{
+  "name": "handlebars-boilerplate",
+  "version": "1.0.0",
+  "description": "Project 2 Starter",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "lint": "eslint --quiet .",
+    "fix": "eslint --fix ."
+  },
+  "license": "ISC",
+  "dependencies": {
+    "@fullcalendar/core": "^4.3.1",
+    "@fullcalendar/daygrid": "^4.3.0",
+    "@fullcalendar/interaction": "^4.3.0",
+    "@fullcalendar/list": "^4.3.0",
+    "@fullcalendar/moment": "^4.3.0",
+    "@fullcalendar/moment-timezone": "^4.3.0",
+    "@fullcalendar/timegrid": "^4.3.0",
+    "animate.css": "^3.7.2",
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.13.1",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.3.5",
+    "dotenv": "^8.0.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
+    "express-session": "^1.11.3",
+    "jshint": "^2.10.2",
+    "moment": "^2.24.0",
+    "morgan": "^1.6.0",
+    "mysql": "^2.7.0",
+    "mysql2": "^1.6.5",
+    "passport": "^0.2.2",
+    "passport-local": "^1.0.0",
+    "sequelize": "^5.15.0",
+    "util": "^0.12.1"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "cross-env": "^5.2.0",
+    "eslint": "^5.16.0",
+    "eslint-config-prettier": "^4.3.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "mocha": "^6.2.0",
+    "prettier": "^1.18.2"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mmorris1990/New_Girl.git"
+  },
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/mmorris1990/New_Girl/issues"
+  },
+  "homepage": "https://github.com/mmorris1990/New_Girl#readme"
+}

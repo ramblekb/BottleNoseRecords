@@ -1,0 +1,2 @@
+SELECT * FROM recordDB.albums;
+

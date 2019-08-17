@@ -1,0 +1,353 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background: url("../images/teal.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.brand_logo {
+    height: 100px;
+    width: 200px;
+    padding-left: 20px;
+}
+
+.my-navbar {
+  background-color: #B2DFDB; 
+  -webkit-box-shadow: 4px 3px 5px -5px rgba(0,0,0,0.75);
+  -moz-box-shadow: 4px 3px 5px -5px rgba(0,0,0,0.75);
+  box-shadow: 4px 3px 5px -5px rgba(0,0,0,0.75);
+  height: 7.25em;
+}
+.navbar-brand{
+  color: #004D40 !important;
+  font-size: 20px;
+}
+
+#nav-mobile {
+    margin-top: 15px;
+}
+
+*
+{
+    outline: none;
+}
+
+body
+{
+    margin: 0;
+    background-color: #009688;
+}
+
+.tb
+{
+    display: table;
+    width: 100%;
+}
+
+.td
+{
+    display: table-cell;
+    vertical-align: middle;
+}
+
+input, button
+{
+    color: #fff;
+    font-family: Nunito;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    background-color: transparent;
+    position: relative;
+    z-index: 0;
+}
+
+#cover
+{
+    position: absolute;
+    top: 18px;
+    right: -220px;
+    width: 550px;
+    padding: 35px;
+    margin: -83px auto 0 auto;
+    background-color: #00796B;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px #00796B, 0 0 0 20px #ffffffeb;
+    transform: scale(0.20);
+    z-index: 10;
+}
+
+form
+{
+    height: 96px;
+}
+
+.searchBar
+{
+    width: 100%;
+    height: 96px;
+    font-size: 60px;
+    line-height: 1;
+}
+
+input[type="text"]::placeholder
+{
+    /* color: #00695C; */
+    color: #b2ebf2;
+    font-weight: 300;
+}
+input:focus::-webkit-input-placeholder {
+    color: white !important;
+}
+
+/* label underline focus color */
+input[type=text]:not(.browser-default):focus:not([readonly]) {
+    color: white !important;
+    border-bottom: 1px solid #00897b !important;
+    box-shadow: 0 1px 0 0 #00897b !important;
+}
+
+
+#s-cover
+{
+    width: 1px;
+    padding-left: 40%;
+}
+
+button
+{
+    position: relative;
+    display: flex;
+    width: 254px;
+    height: 96px;
+    cursor: pointer;
+}
+
+#s-circle
+{
+    position: relative;
+    top: -16px;
+    left: -9px;
+    width: 65px;
+    height: 65px;
+    margin-top: 0;
+    border-width: 15px;
+    border: 15px solid #fff;
+    background-color: transparent;
+    border-radius: 50%;
+    transition: 0.5s ease all;
+}
+
+button span
+{
+    position: absolute;
+    top: 68px;
+    left: 43px;
+    display: block;
+    width: 45px;
+    height: 15px;
+    background-color: transparent;
+    border-radius: 10px;
+    transform: rotateZ(52deg);
+    transition: 0.5s ease all;
+}
+
+button span:before, button span:after
+{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 35px;
+    height: 13px;
+    background-color: #fff;
+    border-radius: 10px;
+    transform: rotateZ(0);
+    transition: 0.5s ease all;
+}
+
+#s-cover:hover #s-circle
+{
+    top: -1px;
+    width: 67px;
+    height: 15px;
+    border-width: 0;
+    background-color: #fff;
+    border-radius: 20px;
+}
+
+#s-cover:hover span
+{
+    top: 50%;
+    left: 56px;
+    width: 25px;
+    margin-top: -9px;
+    transform: rotateZ(0);
+}
+
+#s-cover:hover button span:before
+{
+    bottom: 11px;
+    transform: rotateZ(52deg);
+}
+
+#s-cover:hover button span:after
+{
+    bottom: -11px;
+    transform: rotateZ(-52deg);
+}
+#s-cover:hover button span:before, #s-cover:hover button span:after
+{
+    right: -6px;
+    width: 40px;
+    background-color: #fff;
+}
+
+.user_card {
+    height: 500px;
+    width: 950px;
+    margin-top: 140px;
+    margin-bottom: auto;
+    background: #004D40;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 50px;
+    /* padding-top: 20px; */
+    box-shadow: 0 4px 8px 0 rgba(0, 3, 3, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 5px;
+
+}
+
+/*CSS for Records card*/
+.record_card {
+    height: 600px;
+}
+
+/*CSS for Collections card*/
+.collection_card {
+    height: 960px !important;
+    width: 1050px !important;
+    margin-top: 150px !important;
+    padding-left: 270px !important;
+    margin-bottom: 50px !important;
+    position: relative;
+    display: flex;
+    justify-content: center !important;
+    flex-direction: column;
+    padding: 50px;
+    /* padding-top: 20px; */
+    box-shadow: 0 4px 8px 0 rgba(0, 3, 3, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 5px;
+}
+
+/*CSS for Search card*/
+.search_card {
+    height: 600px !important;
+    padding-top: 10px !important;
+    margin-bottom: 25px !important;
+}
+
+.inputName {
+    padding-right: 45px !important;
+}
+
+.albumCard {
+    margin-top: 25px !important;
+    margin-left: -195px !important;
+}
+
+.cool-font {
+    padding-left: 150px;
+    color: #B2DFDB;
+}
+
+.cool-Font {
+    padding-left: 135px;
+    color: #B2DFDB;
+}
+
+.radio-inline {
+    padding-top: 5px;
+    padding-left: 18px;
+    color: #28968d;
+}
+
+.logout-btn {
+  background-color: #000202 !important; 
+  color: #28968d !important;
+}
+.logout-btn:hover{
+    color: #28968d !important;
+    background: white !important;
+}
+.container {
+    width: 100% !important;
+    position: relative;
+}
+.splash-img {
+    height: 28em;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    position: relative;
+}
+.banner {
+    width: 100%;
+    /* height: 100%; */
+}
+
+.blockquote-footer {
+    height: 20px;
+    width: 300px;
+    align-content: center;
+    /* padding-left: 25px; */
+    padding-bottom: 15px;
+    /* padding-top: 15px */
+
+}
+
+.link {
+    color: #004d40 !important;
+
+}
+
+.link:hover {
+    text
+}
+
+.contTwo {
+    margin-bottom: 15px; 
+}
+
+#serchRecord {
+    margin-top: 20px;
+    margin-left: -35px;
+    padding: 10px;
+    width: 890px !important;
+}
+
+#headerCard {
+    padding-left: 20px; 
+    border-radius: .15em;
+}
+
+.alert-link {
+    color: #004d40 !important;
+}
+
+.searchAll {
+    padding-top: 0px;
+    padding-left: 600px !important;
+    color: #b2ebf2;
+}

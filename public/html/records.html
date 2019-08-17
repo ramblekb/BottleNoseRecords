@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="../styles/search.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+        integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <title>TRADE RECORDS HERE</title>
+</head>
+
+<body>
+
+    <nav class="navbar fixed-top my-navbar">
+        <div class="brand_logo_container">
+            <img src="../images/logo.jpeg" class="brand_logo" alt="Logo">
+        </div>
+        <a class="navbar-brand" href="#"></a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="/collection" class="btn logout-btn" role="button">My Collection</a></li>
+            <li><a href="/search" class="btn logout-btn" role="button" id="navBut">Search</a></li>
+            <li><a href="/logout" class="btn logout-btn" role="button">Logout</a></li>
+        </ul>
+    </nav>
+
+    <div class="d-flex justify-content-center h-100">
+        <div class="user_card record_card">
+            <div class="card-header"></div>
+            <h2 class="teal lighten-5" id="headerCard">Record Search Results:</h2>
+            <!-- record number 1 -->
+        </div>
+    </div>
+    <div class=" container" id="recy">
+
+    </div>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="../js/events.js"></script>
+</body>
+<script>
+    console.log("loaded");
+
+    var searchStorage = localStorage.getItem('Search').split(",");
+    console.log(searchStorage);
+
+    var type = searchStorage[0];
+    var value = searchStorage[1];
+    var url = "/api/records/" + type + "/" + value
+    if (type === "all") {
+        url = "/api/records"
+    };
+    $.get(url, function (data) {
+        for (x in data) {
+            var album_name = data[x].Album;
+            var artist_name = data[x].Artist;
+            var year = data[x].Year;
+            var username = data[x].Username
+            console.log(data[x])
+            var divOne = $("<div>");
+            var aTag = $("<a>")
+            divOne.attr({
+                "class": "cardSet"
+            });
+            divOne.css({
+                "width": "100%",
+                "margin": "10px"
+            });
+            var divTwo = $("<div>");
+
+            divOne.append(divTwo);
+            divTwo.attr({
+                "class": "card"
+            });
+            var divThree = $("<div>");
+            divTwo.prepend(divThree);
+            divThree.attr({
+                "class": "card-header"
+            });
+            divThree.a
+            divThree.html("<h4>" + album_name + "</h4>");
+            var divFour = $("<div>");
+            divFour.attr({
+                "class": "card-body"
+            });
+            divFour.html("<ul> <li><h5>Artist: " + artist_name + "</h5></li><li><h5>Release Year: " + year + "</h5></li><li><h5>Username: " + username + "</ul>");
+            divTwo.append(divFour)
+            var button = $("<button>");
+            button.text("View This Users Catalog");
+            divFour.append(button);
+            button.attr({
+                "class": "btn",
+                "id": username[x]
+            });
+            button.css({
+                "background-color": "blue"
+            })
+
+
+            $("#recy").append(divOne);
+
+        };
+    });
+
+</script>
+
+</html>
